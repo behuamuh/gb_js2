@@ -1,3 +1,6 @@
 .work{
     display: none;
+    background: beige;
+    min-height: 400px;
+    width: 100%;
 }
