@@ -15,7 +15,8 @@ function Menu(my_id, my_class, my_items) {
 }
 Menu.prototype = Object.create(Container.prototype);
 Menu.prototype.constructor = Menu;
-Menu.prototype.render = function () {}
+Menu.prototype.render = function () {};
+
 var menu = new Menu("my_menu", "menu_class", {});
 console.log(menu.render());
 
@@ -28,7 +29,7 @@ function MenuItem(my_href, my_name) {
 MenuItem.prototype = Object.create(Container.prototype);
 MenuItem.prototype.constructor = MenuItem;
 MenuItem.prototype.render = function () {
-    return "<li class='" + this.className + "' href='" + this.href + "'>" + this.itemName + "/li>";
+    return "<li class='" + this.className + "' href='" + this.href + "'>" + this.name + "</li>";
 }
 var m_item1 = new MenuItem("/", "Главная");
 var m_item2 = new MenuItem("/catalogue/", "Каталог");

@@ -40,9 +40,11 @@ function Coffe(power) {
     function start() {
         if(water <= 0){
             alert('Water is EMPTY! Add water.');
+            return;
         }
         if(beans <= 0){
-            alert('Beans is EMPTY! Add beans.')
+            alert('Beans is EMPTY! Add beans.');
+            return;
         }
         cupCoffe = 0;
         beans--;
