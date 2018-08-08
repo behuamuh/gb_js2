@@ -47,8 +47,8 @@ function Coffe(power) {
         addBeansBtn.onclick = addBeans;
         work.appendChild(addBeansBtn);
         var addWaterBtn = document.createElement('button');
-        addBeansBtn.innerText = 'Add Water';
-        addBeansBtn.onclick = addWater;
+        addWaterBtn.innerText = 'Add Water';
+        addWaterBtn.onclick = addWater;
         work.appendChild(addWaterBtn);
     }
 }
