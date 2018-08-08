@@ -10,6 +10,7 @@ btn.onclick = function (){
     document.getElementsByClassName('make')[0].style.display = 'none';
     document.getElementsByClassName('work')[0].style.display = 'block';
     var coffe = new Coffe(pwr);
+    coffe.render();
 
 };
 function Coffe(power) {
@@ -23,7 +24,7 @@ function Coffe(power) {
     var MAX_BEANS = 20;
     var BEANS_PORTION = 5;
 
-    render();
+
     
     function run(){
         if(cupCoffe >= 50 || water < 1){
@@ -45,7 +46,7 @@ function Coffe(power) {
         }
         cupCoffe = 0;
         beans--;
-        stopWork = setInterval(run, 100*power/1000);
+        stopWork = setInterval(run, 100*1000/power);
         
     }
     function stop() {
@@ -75,7 +76,7 @@ function Coffe(power) {
         }
     }
 
-    function render() {
+    this.render = function() {
         var work = document.getElementsByClassName('work')[0];
         
         //beans
