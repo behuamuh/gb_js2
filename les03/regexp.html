@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+<!-- Image and text -->
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+        <img src="img/quots.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+        Форматтер диалогов.
+    </a>
+</nav>
+
+<form>
+<div class="form-group">
+    <label for="exampleFormControlTextarea1">Введите текст в форму и мы заменим апострофы в диалогах на кавычки.</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+</div>
+<button type="submit" class="btn btn-dark">Submit</button>
+</form>
+<div class="d-inline-flex p-2 bd-highlight output"></div>
+<script>
+    $(function () {
+        var btn = $('button.btn');
+        btn.unbind('click');
+        btn.click(function () {
+           var txt = $('#exampleFormControlTextarea1').val();
+           $('#exampleFormControlTextarea1').val('');
+           var result = txt.replace(/(\b'\b)|'/g, (p0, p1) => p1 ? "'" : "\"");
+           $('.output').text(result);
+           return false;
+        });
+    })
+</script>
+</body>
+</html>
