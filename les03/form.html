@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="img/blocks.jpeg" width="30" height="30" class="d-inline-block align-top" alt="">
+            Валидация формы.
+        </a>
+    </nav>
+<form>
+    <div class="form-group">
+        <label for="name">Your name</label>
+        <input type="text" class="form-control" id="name" placeholder="Input name">
+    </div>
+    <div class="form-group">
+        <label for="phone">Your phone</label>
+        <input type="text" class="form-control" id="phone" placeholder="Input phone number">
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+
+    <div class="form-group">
+        <label for="textarea">Example textarea</label>
+        <textarea class="form-control" id="textarea" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-dark">Submit</button>
+</form>
+</div>
+<script src="validate.js"></script>
+</body>
+</html>
