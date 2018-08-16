@@ -1,9 +1,9 @@
 $(function () {
-    $('button.btn').unbind('click');
-    $('button.btn').click(function () {
+    $('button.btn').off('click');
+    $('button.btn').on('click', function () {
         var namePtrn = '[a-zа-яё]';
-        var phonePtrn = '';
-        var emailPtrn = '';
+        var phonePtrn = '^\\+7\\(\\d{3}\\)\\d{3}\\-?\\d{4}';
+        var emailPtrn = '^\\w+@\\w+\\.[a-z]+$';
         var valid = checkElement($('#name'), namePtrn);
         valid = checkElement($('#phone'), phonePtrn) && valid;
         valid = checkElement($('#email'), emailPtrn) && valid;
@@ -17,10 +17,11 @@ $(function () {
 function checkElement(elem,ptrn) {
     var str = elem.val();
     if (new RegExp(ptrn, 'igm').test(str)) {
-        elem.removeClass("invalid-tooltip");
+        elem.css('border','');
         return true;
     }else {
-        elem.addClass("invalid-tooltip");
+        elem.css('border','1px solid red');
+        console.log('error');
         return false;
     }
 
