@@ -1,6 +1,6 @@
 $(function () {
     $('form').submit(function() {
-        var namePtrn = '[a-zа-яё]';
+        var namePtrn = '^[a-zа-яё ]{1,}$';
         var phonePtrn = '^\\+7\\(\\d{3}\\)\\d{3}\\-?\\d{4}';
         var emailPtrn = '^\\w+@\\w+\\.[a-z]+$';
         var txtPtrn = '.';
