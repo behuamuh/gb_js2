@@ -1,17 +1,20 @@
 $(function () {
-    $('button.btn').off('click');
-    $('button.btn').on('click', function () {
+    $('form').submit(function() {
         var namePtrn = '[a-zа-яё]';
         var phonePtrn = '^\\+7\\(\\d{3}\\)\\d{3}\\-?\\d{4}';
         var emailPtrn = '^\\w+@\\w+\\.[a-z]+$';
+        var txtPtrn = '.';
         var valid = checkElement($('#name'), namePtrn);
         valid = checkElement($('#phone'), phonePtrn) && valid;
         valid = checkElement($('#email'), emailPtrn) && valid;
+        valid = checkElement($('#textarea'), txtPtrn) && valid;
         if (valid) {
-            $('form').submit();
+            return true;
         }
+        return false;
 
     });
+
 
 });
 function checkElement(elem,ptrn) {
@@ -21,7 +24,7 @@ function checkElement(elem,ptrn) {
         return true;
     }else {
         elem.css('border','1px solid red');
-        console.log('error');
+        //console.log('error');
         return false;
     }
 
