@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <script src=jquery-2.1.1.js></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="img/blocks.jpeg" width="30" height="30" class="d-inline-block align-top" alt="">
+            Валидация формы.
+        </a>
+    </nav>
+<form>
+    <div class="form-group">
+        <label for="name">Your name</label>
+        <input type="text" class="form-control" id="name" placeholder="Input name">
+    </div>
+    <div class="form-group">
+        <label for="phone">Your phone</label>
+        <input type="text" class="form-control" id="phone" placeholder="Input phone number">
+    </div>
+    <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="text" class="form-control" id="email" placeholder="Enter email">
+    </div>
+<div class="form-group">
+    <label for="selectCity">Your city</label>
+    <input type="text" class="form-control" id="selectCity" placeholder="Enter city" list="dl">
+     <datalist id="dl">
+<!--      <option value="newyork">-->
+
+     </datalist>
+  </div>
+
+    <div class="form-group">
+        <label for="textarea">Example textarea</label>
+        <textarea class="form-control" id="textarea" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-dark">Submit</button>
+</form>
+<div id="result"></div>
+</div>
+<script src="validate.js"></script>
+</body>
+</html>
