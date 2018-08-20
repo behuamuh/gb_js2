@@ -1,4 +1,5 @@
 $(function () {
+    hideAll();
     var btns = $('button');
     btns.each(function (ind, item) {
         $(item).on('click', function () {
@@ -14,5 +15,5 @@ function hideAll() {
 function show(id) {
     var showTab = $('#' + id);
     hideAll();
-    showTab.removeClass('d-none').addClass('d-block');
+    showTab.show(1000);
 }
