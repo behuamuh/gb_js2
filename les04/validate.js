@@ -18,6 +18,7 @@ $(function () {
         return valid;
     });
     $('#selectCity').keyup(function(){
+        $('#dl').html('');
         var inpStr = $(this).val();
         if(inpStr.length > 2){
             sities.forEach(function(elem){
