@@ -18,7 +18,6 @@ function Review(review) {
 			});
 		let $buttonsWrapper;
 
-		// Render review data for admin section.
 		if (adminMode) {
 			$wrapper.append($('<p>', {
 					class: `reviewHeader`,
@@ -68,7 +67,7 @@ function Review(review) {
 				.append($('<hr>'))
 				.append($buttonsWrapper)
 		} else {
-			// Render review data for user section.
+
 			$wrapper.append($('<p>', {
 					class: `reviewHeader`,
 					html: `${this.submitTime.toLocaleString()} (<span class="reviewUserId">${this.userId})`
