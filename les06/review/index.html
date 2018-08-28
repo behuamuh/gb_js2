@@ -3,48 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <title>Review</title>
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+
     <style>
         body{
-            background-color: #17a2b8;
+            background-color: #9fcdff ;
         }
     </style>
-    <script src="jquery-migrate-1.2.1.min.js"></script>
-    <script src="jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
-    <script src="Container.js"></script>
-    <script src="Form.js"></script>
-    <script src="Review.js"></script>
+    <script src="js/Container.js"></script>
+    <script src="js/Form.js"></script>
+    <script src="js/Review.js"></script>
+    <script src="js/validate.js"></script>
+    <script src="js/Basket.js"></script>
+    <script src="js/Goods.js"></script>
+
+
+
 </head>
 <body>
 <div class="container">
-<div class="multiple-items">
-    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        At aut consequatur, dignissimos, eius eos labore magni nulla pariatur quia quibusdam sed, soluta?
-        Accusantium, facilis labore nisi officia provident vero voluptatibus.</li>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="img/blocks.jpeg" width="30" height="30" class="d-inline-block align-top" alt="">
+            Интернет магазин
+        </a>
+    </nav>
+    <div id="basket"></div>
+    <br>
+    <hr>
+    <div class="multiple-items" id="goods"></div>
 
-    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        At aut consequatur, dignissimos, eius eos labore magni nulla pariatur quia quibusdam sed, soluta?
-        Accusantium, facilis labore nisi officia provident vero voluptatibus.</li>
-    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        At aut consequatur, dignissimos, eius eos labore magni nulla pariatur quia quibusdam sed, soluta?
-        Accusantium, facilis labore nisi officia provident vero voluptatibus.</li>
-    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        At aut consequatur, dignissimos, eius eos labore magni nulla pariatur quia quibusdam sed, soluta?
-        Accusantium, facilis labore nisi officia provident vero voluptatibus.</li>
-    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        At aut consequatur, dignissimos, eius eos labore magni nulla pariatur quia quibusdam sed, soluta?
-        Accusantium, facilis labore nisi officia provident vero voluptatibus.</li>
-    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        At aut consequatur, dignissimos, eius eos labore magni nulla pariatur quia quibusdam sed, soluta?
-        Accusantium, facilis labore nisi officia provident vero voluptatibus.</li>
+    <!--      review        -->
 
-</div>
 <div id="review"></div>
+
+    <!--      contact form  -->
+
+    <div class="form">
+        <h3>Свяжитесь с нами</h3>
+        <form>
+            <div class="form-group">
+                <label for="name">Your name</label>
+                <input type="text" class="form-control" id="name" placeholder="Input name">
+            </div>
+            <div class="form-group">
+                <label for="phone">Your phone</label>
+                <input type="text" class="form-control" id="phone" placeholder="+7(000)000-00-00">
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="text" class="form-control" id="email" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="datepicker">Your Birth Date</label>
+                <input type="date" class="form-control" id="datepicker" placeholder="Birth Date">
+            </div>
+
+            <div class="form-group">
+                <label for="selectCity">Your city</label>
+                <input type="text" class="form-control" id="selectCity" placeholder="Enter city" list="dl">
+                <datalist id="dl">
+                </datalist>
+            </div>
+
+            <div class="form-group">
+                <label for="textarea">Example textarea</label>
+                <textarea class="form-control" id="textarea" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-dark">Submit</button>
+        </form>
+    </div>
 </div>
+
     <script>
+        var myBasket = new Basket(1);
+        myBasket.render();
+        myBasket.get();
+        myGood1 = new Goods('1', 'Sony xperia Z', 1000, myBasket);
+        myGood1.render();
+        myGood2 = new Goods('2', 'iPhone 6', 600, myBasket);
+        myGood2.render();
+        myGood1 = new Goods('3', 'Samsung s9', 1200, myBasket);
+        myGood1.render();
+        myGood2 = new Goods('4', 'iPhone 7', 1200, myBasket);
+        myGood2.render();
+        myGood1 = new Goods('5', 'Alkatel', 100, myBasket);
+        myGood1.render();
+        myGood2 = new Goods('6', 'iPhone X', 2000, myBasket);
+        myGood2.render();
         var myForm = new Form();
         myForm.render();
         $('.multiple-items').slick({

@@ -5,7 +5,7 @@ function Review(id, message) {
     this.allowed = false;
 
     $.get({   //ajax
-        url: './add.json',
+        url: './json/add.json',
         //method: 'POST',
         context: this,
         data: { id_user : this.id,
@@ -39,7 +39,7 @@ Review.prototype.render = function () {
             text: 'Одобрить'
             , click: function () {
                 $.get({   //ajax
-                    url: './submit.json',
+                    url: './json/submit.json',
                     //method: 'POST',
                     context: self,
                     data: { id_comment : this.id,
@@ -71,7 +71,7 @@ Review.prototype.render = function () {
 };
 Review.prototype.remove = function () {
     $.get({   //ajax
-        url: './delete.json',
+        url: './json/delete.json',
         //method: 'POST',
         context: this,
         data: { id_comment : this.id,

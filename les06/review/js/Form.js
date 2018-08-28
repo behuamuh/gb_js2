@@ -37,7 +37,7 @@ Form.prototype.render = function () {
         , text: 'Загрузить отзывы'
         , click: function () {
             $.get({   //ajax
-                url: './list.json',
+                url: './json/list.json',
                 //method: 'POST',
                 context: this,
                 dataType: 'json',
