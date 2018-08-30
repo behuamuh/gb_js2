@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Review</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="js/Container.js"></script>
+    <script src="js/Form.js"></script>
+    <script src="js/Review.js"></script>
+    <script src="js/validate.js"></script>
+    <script src="js/Basket.js"></script>
+    <script src="js/Goods.js"></script>
+
+
+
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="images/smartphones-624x416.jpg" width="60" height="30" class="d-inline-block align-top" alt="">
+            Интернет магазин
+        </a>
+    </nav>
+    <!--      basket        -->
+
+    <div id="basket"></div>
+
+    <div class="multiple-items" id="goods"></div>
+
+    <!--      review        -->
+
+<div id="review"></div>
+
+    <!--      contact form  -->
+
+    <div class="form">
+        <h3>Свяжитесь с нами</h3>
+        <form>
+            <div class="form-group">
+                <label for="name">Your name</label>
+                <input type="text" class="form-control" id="name" placeholder="Input name">
+            </div>
+            <div class="form-group">
+                <label for="phone">Your phone</label>
+                <input type="text" class="form-control" id="phone" placeholder="+7(000)000-00-00">
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="text" class="form-control" id="email" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="datepicker">Your Birth Date</label>
+                <input type="date" class="form-control" id="datepicker" placeholder="Birth Date">
+            </div>
+
+            <div class="form-group">
+                <label for="selectCity">Your city</label>
+                <input type="text" class="form-control" id="selectCity" placeholder="Enter city" list="dl">
+                <datalist id="dl">
+                </datalist>
+            </div>
+
+            <div class="form-group">
+                <label for="textarea">Example textarea</label>
+                <textarea class="form-control" id="textarea" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-dark">Submit</button>
+        </form>
+    </div>
+</div>
+
+<!-- Footer -->
+
+<footer class="page-footer font-small dark pt-4">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+        <a href="https://behuamuh.github.io/mycite/"> behuamuh.github.io</a>
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+    <script src="js/index.js"></script>
+</body>
+</html>
